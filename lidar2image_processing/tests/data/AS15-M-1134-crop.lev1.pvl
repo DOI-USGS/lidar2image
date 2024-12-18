@@ -1,0 +1,416 @@
+Group = GroundPoint
+  Filename                   = data/AS15-M-1134-crop.lev1.cub
+  Sample                     = 600.0
+  Line                       = 600.0
+  PixelValue                 = 37088.055
+  RightAscension             = 263.1861860857
+  Declination                = -25.800587372763
+  PlanetocentricLatitude     = 26.207993776875
+  PlanetographicLatitude     = 26.207993776875
+  PositiveEast360Longitude   = 3.4626090790356
+  PositiveEast180Longitude   = 3.4626090790356
+  PositiveWest360Longitude   = 356.53739092096
+  PositiveWest180Longitude   = -3.4626090790356
+  BodyFixedCoordinate        = (1554.1585601614, 94.038420427004,
+                                766.40930759582) <km>
+  LocalRadius                = 1735406.3735647 <meters>
+  SampleResolution           = 7.8283813868262 <meters/pixel>
+  LineResolution             = 7.8283813868262 <meters/pixel>
+
+  # Spacecraft Information
+  SpacecraftPosition         = (1668.1609187367, 127.53854736842,
+                                774.17358979821) <km>
+  SpacecraftAzimuth          = 51.533646782275
+  SlantDistance              = 119.07594359874 <km>
+  TargetCenterDistance       = 1843.4672980572 <km>
+  SubSpacecraftLatitude      = 24.831756095817
+  SubSpacecraftLongitude     = 4.372019573016
+  SpacecraftAltitude         = 105.6905769394 <km>
+  OffNadirAngle              = 24.049369634801
+  SubSpacecraftGroundAzimuth = 148.99427706853
+
+  # Sun Information
+  SunPosition                = (72987157.05065, 133319532.30938,
+                                556021.51799135) <km>
+  SubSolarAzimuth            = 7.5397434657195
+  SolarDistance              = 1.0159974129203 <AU>
+  SubSolarLatitude           = 0.20960170441931
+  SubSolarLongitude          = 61.301043176222
+  SubSolarGroundAzimuth      = 105.31333584151
+
+  # Illumination and Other
+  Phase                      = 45.02907641232
+  Incidence                  = 61.367546687977
+  Emission                   = 25.651710526841
+  NorthAzimuth               = 262.74249904201
+
+  # Time
+  EphemerisTime              = -896833081.95174 <seconds>
+  UTC                        = 1971-08-01T11:41:16.865
+  LocalSolarTime             = 8.1441043935209 <hour>
+  SolarLongitude             = 172.59291338132
+End_Group
+Group = GroundPoint
+  Filename                   = data/AS15-M-1134-crop.lev1.cub
+  Sample                     = 600.0
+  Line                       = 600.0
+  PixelValue                 = 37088.055
+  RightAscension             = 263.1861860857
+  Declination                = -25.800587372763
+  PlanetocentricLatitude     = 26.207993776875
+  PlanetographicLatitude     = 26.207993776875
+  PositiveEast360Longitude   = 3.4626090790356
+  PositiveEast180Longitude   = 3.4626090790356
+  PositiveWest360Longitude   = 356.53739092096
+  PositiveWest180Longitude   = -3.4626090790356
+  BodyFixedCoordinate        = (1554.1585601614, 94.038420427004,
+                                766.40930759582) <km>
+  LocalRadius                = 1735406.3735647 <meters>
+  SampleResolution           = 7.8283813868262 <meters/pixel>
+  LineResolution             = 7.8283813868262 <meters/pixel>
+
+  # Spacecraft Information
+  SpacecraftPosition         = (1668.1609187367, 127.53854736842,
+                                774.17358979821) <km>
+  SpacecraftAzimuth          = 51.533646782275
+  SlantDistance              = 119.07594359874 <km>
+  TargetCenterDistance       = 1843.4672980572 <km>
+  SubSpacecraftLatitude      = 24.831756095817
+  SubSpacecraftLongitude     = 4.372019573016
+  SpacecraftAltitude         = 105.6905769394 <km>
+  OffNadirAngle              = 24.049369634801
+  SubSpacecraftGroundAzimuth = 148.99427706853
+
+  # Sun Information
+  SunPosition                = (72987157.05065, 133319532.30938,
+                                556021.51799135) <km>
+  SubSolarAzimuth            = 7.5397434657195
+  SolarDistance              = 1.0159974129203 <AU>
+  SubSolarLatitude           = 0.20960170441931
+  SubSolarLongitude          = 61.301043176222
+  SubSolarGroundAzimuth      = 105.31333584151
+
+  # Illumination and Other
+  Phase                      = 45.02907641232
+  Incidence                  = 61.367546687977
+  Emission                   = 25.651710526841
+  NorthAzimuth               = 262.74249904201
+
+  # Time
+  EphemerisTime              = -896833081.95174 <seconds>
+  UTC                        = 1971-08-01T11:41:16.865
+  LocalSolarTime             = 8.1441043935209 <hour>
+  SolarLongitude             = 172.59291338132
+End_Group
+Group = GroundPoint
+  Filename                   = data/AS15-M-1134-crop.lev1.cub
+  Sample                     = 600.0
+  Line                       = 600.0
+  PixelValue                 = 46140.265
+  RightAscension             = 272.03854866677
+  Declination                = -35.533313335182
+  PlanetocentricLatitude     = 25.511089688212
+  PlanetographicLatitude     = 25.511089688212
+  PositiveEast360Longitude   = 2.9388914234966
+  PositiveEast180Longitude   = 2.9388914234966
+  PositiveWest360Longitude   = 357.0611085765
+  PositiveWest180Longitude   = -2.9388914234965
+  BodyFixedCoordinate        = (1564.0597945462, 80.296270179191,
+                                747.37284177989) <km>
+  LocalRadius                = 1735308.8187843 <meters>
+  SampleResolution           = 7.7194312385017 <meters/pixel>
+  LineResolution             = 7.7194312385017 <meters/pixel>
+
+  # Spacecraft Information
+  SpacecraftPosition         = (1668.1609187367, 127.53854736842,
+                                774.17358979821) <km>
+  SpacecraftAzimuth          = 20.095394834627
+  SlantDistance              = 117.4187246826 <km>
+  TargetCenterDistance       = 1843.4672980572 <km>
+  SubSpacecraftLatitude      = 24.831756095817
+  SubSpacecraftLongitude     = 4.372019573016
+  SpacecraftAltitude         = 105.6905769394 <km>
+  OffNadirAngle              = 22.186430341458
+  SubSpacecraftGroundAzimuth = 117.3374975227
+
+  # Sun Information
+  SunPosition                = (72987157.05065, 133319532.30938,
+                                556021.51799135) <km>
+  SubSolarAzimuth            = 7.299473008728
+  SolarDistance              = 1.0159974621788 <AU>
+  SubSolarLatitude           = 0.20960170441931
+  SubSolarLongitude          = 61.301043176222
+  SubSolarGroundAzimuth      = 104.65329862033
+
+  # Illumination and Other
+  Phase                      = 38.786939735878
+  Incidence                  = 61.642635231758
+  Emission                   = 23.65058581779
+  NorthAzimuth               = 262.82070857753
+
+  # Time
+  EphemerisTime              = -896833081.95174 <seconds>
+  UTC                        = 1971-08-01T11:41:16.865
+  LocalSolarTime             = 8.1091898831517 <hour>
+  SolarLongitude             = 172.59291338132
+End_Group
+Group = GroundPoint
+  Filename                   = data/AS15-M-1134-crop.lev1.cub
+  Sample                     = 600.0
+  Line                       = 600.0
+  PixelValue                 = 34286.371
+  RightAscension             = 270.90278227504
+  Declination                = -37.158982040709
+  PlanetocentricLatitude     = 25.403434529103
+  PlanetographicLatitude     = 25.403434529103
+  PositiveEast360Longitude   = 3.0347131341703
+  PositiveEast180Longitude   = 3.0347131341703
+  PositiveWest360Longitude   = 356.96528686583
+  PositiveWest180Longitude   = -3.0347131341702
+  BodyFixedCoordinate        = (1565.6499720611, 83.003436106724,
+                                744.58445294435) <km>
+  LocalRadius                = 1735671.458827 <meters>
+  SampleResolution           = 7.6010083619642 <meters/pixel>
+  LineResolution             = 7.6010083619642 <meters/pixel>
+
+  # Spacecraft Information
+  SpacecraftPosition         = (1668.1609187367, 127.53854736842,
+                                774.17358979821) <km>
+  SpacecraftAzimuth          = 17.70437138787
+  SlantDistance              = 115.61741799217 <km>
+  TargetCenterDistance       = 1843.4672980572 <km>
+  SubSpacecraftLatitude      = 24.831756095817
+  SubSpacecraftLongitude     = 4.372019573016
+  SpacecraftAltitude         = 105.6905769394 <km>
+  OffNadirAngle              = 20.536512603243
+  SubSpacecraftGroundAzimuth = 114.98847982189
+
+  # Sun Information
+  SunPosition                = (72987157.05065, 133319532.30938,
+                                556021.51799135) <km>
+  SubSolarAzimuth            = 7.2912595212218
+  SolarDistance              = 1.0159974412694 <AU>
+  SubSolarLatitude           = 0.20960170441931
+  SubSolarLongitude          = 61.301043176222
+  SubSolarGroundAzimuth      = 104.64997810378
+
+  # Illumination and Other
+  Phase                      = 40.131232603281
+  Incidence                  = 61.531699685074
+  Emission                   = 21.875519201885
+  NorthAzimuth               = 262.73559941451
+
+  # Time
+  EphemerisTime              = -896833081.95174 <seconds>
+  UTC                        = 1971-08-01T11:41:16.865
+  LocalSolarTime             = 8.1155779971966 <hour>
+  SolarLongitude             = 172.59291338132
+End_Group
+Group = GroundPoint
+  Filename                   = data/AS15-M-1134-crop.lev1.cub
+  Sample                     = 700.0
+  Line                       = 700.0
+  PixelValue                 = 34286.371
+  RightAscension             = 270.90278227504
+  Declination                = -37.158982040709
+  PlanetocentricLatitude     = 25.403434529103
+  PlanetographicLatitude     = 25.403434529103
+  PositiveEast360Longitude   = 3.0347131341703
+  PositiveEast180Longitude   = 3.0347131341703
+  PositiveWest360Longitude   = 356.96528686583
+  PositiveWest180Longitude   = -3.0347131341702
+  BodyFixedCoordinate        = (1565.6499720611, 83.003436106724,
+                                744.58445294435) <km>
+  LocalRadius                = 1735671.458827 <meters>
+  SampleResolution           = 7.6010083619642 <meters/pixel>
+  LineResolution             = 7.6010083619642 <meters/pixel>
+
+  # Spacecraft Information
+  SpacecraftPosition         = (1668.1609187367, 127.53854736842,
+                                774.17358979821) <km>
+  SpacecraftAzimuth          = 17.70437138787
+  SlantDistance              = 115.61741799217 <km>
+  TargetCenterDistance       = 1843.4672980572 <km>
+  SubSpacecraftLatitude      = 24.831756095817
+  SubSpacecraftLongitude     = 4.372019573016
+  SpacecraftAltitude         = 105.6905769394 <km>
+  OffNadirAngle              = 20.536512603243
+  SubSpacecraftGroundAzimuth = 114.98847982189
+
+  # Sun Information
+  SunPosition                = (72987157.05065, 133319532.30938,
+                                556021.51799135) <km>
+  SubSolarAzimuth            = 7.2912595212218
+  SolarDistance              = 1.0159974412694 <AU>
+  SubSolarLatitude           = 0.20960170441931
+  SubSolarLongitude          = 61.301043176222
+  SubSolarGroundAzimuth      = 104.64997810378
+
+  # Illumination and Other
+  Phase                      = 40.131232603281
+  Incidence                  = 61.531699685074
+  Emission                   = 21.875519201885
+  NorthAzimuth               = 262.73559941451
+
+  # Time
+  EphemerisTime              = -896833081.95174 <seconds>
+  UTC                        = 1971-08-01T11:41:16.865
+  LocalSolarTime             = 8.1155779971966 <hour>
+  SolarLongitude             = 172.59291338132
+End_Group
+Group = GroundPoint
+  Filename                   = data/AS15-M-1134-crop.lev1.cub
+  Sample                     = 750.0
+  Line                       = 750.0
+  PixelValue                 = 38642.434
+  RightAscension             = 270.30651469777
+  Declination                = -37.981358965981
+  PlanetocentricLatitude     = 25.350228637496
+  PlanetographicLatitude     = 25.350228637496
+  PositiveEast360Longitude   = 3.0814695141496
+  PositiveEast180Longitude   = 3.0814695141496
+  PositiveWest360Longitude   = 356.91853048585
+  PositiveWest180Longitude   = -3.0814695141496
+  BodyFixedCoordinate        = (1566.3817452611, 84.324129895627,
+                                743.18051802077) <km>
+  LocalRadius                = 1735793.6551145 <meters>
+  SampleResolution           = 7.5495641181525 <meters/pixel>
+  LineResolution             = 7.5495641181525 <meters/pixel>
+
+  # Spacecraft Information
+  SpacecraftPosition         = (1668.1609187367, 127.53854736842,
+                                774.17358979821) <km>
+  SpacecraftAzimuth          = 16.343179465128
+  SlantDistance              = 114.83490988839 <km>
+  TargetCenterDistance       = 1843.4672980572 <km>
+  SubSpacecraftLatitude      = 24.831756095817
+  SubSpacecraftLongitude     = 4.372019573016
+  SpacecraftAltitude         = 105.6905769394 <km>
+  OffNadirAngle              = 19.711624197521
+  SubSpacecraftGroundAzimuth = 113.64774838529
+
+  # Sun Information
+  SunPosition                = (72987157.05065, 133319532.30938,
+                                556021.51799135) <km>
+  SubSolarAzimuth            = 7.2847532380628
+  SolarDistance              = 1.015997431211 <AU>
+  SubSolarLatitude           = 0.20960170441931
+  SubSolarLongitude          = 61.301043176222
+  SubSolarGroundAzimuth      = 104.64787142785
+
+  # Illumination and Other
+  Phase                      = 40.827898665285
+  Incidence                  = 61.477372323107
+  Emission                   = 20.990219671284
+  NorthAzimuth               = 262.6964233542
+
+  # Time
+  EphemerisTime              = -896833081.95174 <seconds>
+  UTC                        = 1971-08-01T11:41:16.865
+  LocalSolarTime             = 8.1186950891952 <hour>
+  SolarLongitude             = 172.59291338132
+End_Group
+Group = GroundPoint
+  Filename                   = data/AS15-M-1134-crop.lev1.cub
+  Sample                     = 800.0
+  Line                       = 800.0
+  PixelValue                 = 11585.829
+  RightAscension             = 269.69019760879
+  Declination                = -38.809380323083
+  PlanetocentricLatitude     = 25.294220730495
+  PlanetographicLatitude     = 25.294220730495
+  PositiveEast360Longitude   = 3.1360249908966
+  PositiveEast180Longitude   = 3.1360249908966
+  PositiveWest360Longitude   = 356.8639750091
+  PositiveWest180Longitude   = -3.1360249908966
+  BodyFixedCoordinate        = (1567.7195320648, 85.893290899056,
+                                741.97530180302) <km>
+  LocalRadius                = 1736562.5635503 <meters>
+  SampleResolution           = 7.4552202781322 <meters/pixel>
+  LineResolution             = 7.4552202781322 <meters/pixel>
+
+  # Spacecraft Information
+  SpacecraftPosition         = (1668.1609187367, 127.53854736842,
+                                774.17358979821) <km>
+  SpacecraftAzimuth          = 14.852403881085
+  SlantDistance              = 113.39986460661 <km>
+  TargetCenterDistance       = 1843.4672980572 <km>
+  SubSpacecraftLatitude      = 24.831756095817
+  SubSpacecraftLongitude     = 4.372019573016
+  SpacecraftAltitude         = 105.6905769394 <km>
+  OffNadirAngle              = 18.889257661904
+  SubSpacecraftGroundAzimuth = 112.18073687267
+
+  # Sun Information
+  SunPosition                = (72987157.05065, 133319532.30938,
+                                556021.51799135) <km>
+  SubSolarAzimuth            = 7.2765244253239
+  SolarDistance              = 1.0159974177456 <AU>
+  SubSolarLatitude           = 0.20960170441931
+  SubSolarLongitude          = 61.301043176222
+  SubSolarGroundAzimuth      = 104.6485037831
+
+  # Illumination and Other
+  Phase                      = 41.540364508284
+  Incidence                  = 61.41549802133
+  Emission                   = 20.100618401623
+  NorthAzimuth               = 262.65468229335
+
+  # Time
+  EphemerisTime              = -896833081.95174 <seconds>
+  UTC                        = 1971-08-01T11:41:16.865
+  LocalSolarTime             = 8.1223321209783 <hour>
+  SolarLongitude             = 172.59291338132
+End_Group
+Group = GroundPoint
+  Filename                   = data/AS15-M-1134-crop.lev1.cub
+  Sample                     = 900.0
+  Line                       = 900.0
+  PixelValue                 = 51337.534
+  RightAscension             = 268.39380188589
+  Declination                = -40.479942507376
+  PlanetocentricLatitude     = 25.187485113586
+  PlanetographicLatitude     = 25.187485113586
+  PositiveEast360Longitude   = 3.2335184832202
+  PositiveEast180Longitude   = 3.2335184832202
+  PositiveWest360Longitude   = 356.76648151678
+  PositiveWest180Longitude   = -3.2335184832202
+  BodyFixedCoordinate        = (1569.608021703, 88.675845819869,
+                                739.35986162076) <km>
+  LocalRadius                = 1737292.6501894 <meters>
+  SampleResolution           = 7.3311223537274 <meters/pixel>
+  LineResolution             = 7.3311223537274 <meters/pixel>
+
+  # Spacecraft Information
+  SpacecraftPosition         = (1668.1609187367, 127.53854736842,
+                                774.17358979821) <km>
+  SpacecraftAzimuth          = 11.411179896713
+  SlantDistance              = 111.51223589808 <km>
+  TargetCenterDistance       = 1843.4672980572 <km>
+  SubSpacecraftLatitude      = 24.831756095817
+  SubSpacecraftLongitude     = 4.372019573016
+  SpacecraftAltitude         = 105.6905769394 <km>
+  OffNadirAngle              = 17.261458593046
+  SubSpacecraftGroundAzimuth = 108.78197446353
+
+  # Sun Information
+  SunPosition                = (72987157.05065, 133319532.30938,
+                                556021.51799135) <km>
+  SubSolarAzimuth            = 7.2560692167305
+  SolarDistance              = 1.0159973954323 <AU>
+  SubSolarLatitude           = 0.20960170441931
+  SubSolarLongitude          = 61.301043176222
+  SubSolarGroundAzimuth      = 104.64585670027
+
+  # Illumination and Other
+  Phase                      = 43.010835941948
+  Incidence                  = 61.303188569746
+  Emission                   = 18.352807566243
+  NorthAzimuth               = 262.58286074833
+
+  # Time
+  EphemerisTime              = -896833081.95174 <seconds>
+  UTC                        = 1971-08-01T11:41:16.865
+  LocalSolarTime             = 8.1288316871332 <hour>
+  SolarLongitude             = 172.59291338132
+End_Group

@@ -1,0 +1,67 @@
+\documentclass[float=false, crop=false]{standalone}
+
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{natbib}
+\usepackage{longtable,lscape}
+\usepackage{verbatim} 
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mdwlist}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{times,epsfig,graphicx}
+\usepackage{fancyhdr}
+\usepackage[hyphens]{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage{subfigure}
+\usepackage{caption}
+\usepackage[T1]{fontenc}
+
+\begin{document}
+
+The {\bf{track\_splitter}} application splits a LOLA file into multiple tracks and saves info for each track into
+a separate file.
+
+\section{Files:}
+
+\begin{itemize}
+\item{track\_splitter.cc - The main method, parses command line arguments and splits a LOLA files in multiple
+  tracks based on time stamps.}
+\item{TracksLOLA.cc and TracksLOLA.h - Define, load and save track data structures. Compute track reflectance and
+luminence, and transform tracks.} 
+\item{TracksFeatures.cc and TracksFeatures.h - Find key points to use as ground control points.}
+\item{TracksWeights.cc and TracksWeights.h - Compute track weights based on the features saliency} 
+\end{itemize}
+
+\section{How to install:}
+\begin{enumerate}
+	\item{\emph{Install Prerequisites}} - Install GDAL 1.9, OpenCV 2.4.9, ISIS 3.1, Eigen 3, Boost 1.5
+	\item{\emph{Build }} - In the \texttt{lidar2image\_processing/tests} directory,
+          run ``\texttt{cmake ..}'' followed by ``\texttt{make}'' to create the {\texttt{tests/lidar2image}}
+          executable.
+\end{enumerate}
+
+\section{How to run}
+The command ``\texttt{lidar\_image\_align -l lola\_tracks.csv -i image.cub}'' will        
+align the LOLA tracks in the CSV file \texttt{lola\_tracks.csv} to the image file \texttt{image.cub}.
+The transformation matrix and the ground control point files will be output in results directory under
+filename\_transf.txt and filename\_trackIndex\_shotIndex\_gcp.txt where filename is the stem of the image
+filename (filename with no path and no extension). The following options may be passed to
+{\texttt{lidar\_image\_align}} at runtime.                   
+\begin{itemize}
+	\item{\texttt{-l, --lidarFile filename}} : a CSV file containing the LOLA shots to process or a file containing a
+        list of LOLA CSV shots to process, separated by linebreaks
+	\item{\texttt{-i, --inputCubFile filename}} : a cub image to align tracks to
+        \item{\texttt{-r, --results directory name}} : optional parameter for the directory name where results are saved
+        \item{\texttt{-s, --settings filename}} : optional parameter containing the settings filename
+        \item{\texttt{-t, --test mode}} : optional parameter to run in test mode
+	\item{\texttt{-h, --help}} : display a help message
+\end{itemize}
+
+lidar\_image\_align.sh is an script example to run data available in lidar2image\_processing/tests/data directory.  
+
+\end{document}

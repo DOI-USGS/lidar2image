@@ -1,0 +1,80 @@
+\documentclass[float=false, crop=false]{standalone}
+
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{natbib}
+\usepackage{longtable,lscape}
+\usepackage{verbatim} 
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mdwlist}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{times,epsfig,graphicx}
+\usepackage{fancyhdr}
+\usepackage[hyphens]{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage{subfigure}
+\usepackage{caption}
+\usepackage[T1]{fontenc}
+
+\begin{document}
+
+The files in common are used for several different modules in the Alignment Toolkit.
+
+\section{Files:}
+\begin{itemize}
+\item{pc\_vis.cpp} - point cloud viewer
+\item{Tiling.h} - declaration of Tiling class
+\item{Tiling.cpp} - definition of Tiling class
+\item{pds\_read.h} - declaration of functions that read data from pds files
+\item{pds\_read.cpp} - definition of functions that read data from pds files
+\item{opencv\_pds.h} - declaration of functions to read pds images into OpenCV images
+\item{opencv\_pds.cpp} - definition of functions to read pds images into OpenCV images
+\item{tests/tilingTest.cpp} - test file for class
+\item{tests/tileConfig.txt} - configuration file for tile test
+\item{tests/testImageList.txt} - list of test images to run tilingTest on
+\item{tests/test\_read.cpp} - test file for the opencv pds image reader
+
+\end{itemize}
+
+\section{How to install:}
+\begin{enumerate}
+	\item{Install Prerequisites} - OpenCV 2.3.1, PCL 1.5, cmake 
+   \item{Install} pds tools from http://pds.nasa.gov/tools/pds-tools-package.shtml To install run batch\_make in /src. 
+   \item{Set} environment variable OALROOT to the root of the pds tools install
+	\item{Build} - cd common/tests and type cmake . and then make
+\end{enumerate}
+
+\section{How to run:}
+\begin{itemize}
+	\item{pc\_vis} - ./pc\_vis PC.txt
+	\item{tilingTest} - ./tiling tileConfig testImageList
+	\item{pdsReadTest} - ./pdsReadTest testImage.img
+\end{itemize}
+\subsection{Configuration Parameters}
+If the configuration file is not specified, the program will run with a set of default parameters.
+\begin{itemize}
+	\item{\textsc{tileWidth}} - width of each tile
+	\item{\textsc{tileHeight}} - height of each tile
+	\item{\textsc{xOverlap}} - overlap of each tile in the x direction
+	\item{\textsc{yOverlap}} - overlap of each tile in the y direction
+\end{itemize}
+
+
+\section{Tiling}
+The tiling module is used in both the stereo\_processing and sfm\_processing modules.
+\subsubsection{Algorithm}
+Using OpenCV, the image is loaded, along with the tiling parameters which are read from a configuration file. We make a vector of bounding boxes which contain the starting x, starting y, width and height for each tile of the image. There is an allowed overlap between tiles, if there is no overlap specified, then the tiles touch along the edges with no overlapping pixels. We start from x=0, y=0 with the width = tileWidth and height = tileHeight. We save the bounding box and move horizontally. If there is an overlap specified then we move over to width-xOverlap and start again with width = tileWidth. The same process is performed vertically with height-yOverlap. If a tile has a specified width that makes it reach past the edge of the image, the edge of the image becomes the end of the tile and the beginning of the tile is moved left to make the width = tileWidth. The same is done when the height of the tile is too large. This is a portion of the algorithm that is necessary for the stereo tiling that is done. The bounding boxes are saved into a vector and can be used in other applications, such as the stereo\_processing and sfm\_processing modules.
+
+\end{document}
+
+
+
+
+
+
+

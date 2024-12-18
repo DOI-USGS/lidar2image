@@ -1,0 +1,154 @@
+\documentclass[float=false, crop=false]{standalone}
+
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{natbib}
+\usepackage{longtable,lscape}
+\usepackage{verbatim} 
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mdwlist}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{times,epsfig,graphicx}
+\usepackage{fancyhdr}
+\usepackage[hyphens]{url}
+\usepackage[hidelinks]{hyperref}
+\usepackage{subfigure}
+\usepackage{caption}
+\usepackage[T1]{fontenc}
+
+\begin{document}
+
+\section{Files:}
+
+\begin{itemize}
+
+	\item{pinhole.cc - the class that handles pinhole model cameras}
+	\item{pinhole.h - the header file that defines the pinhole class}
+	\item{CAHV.cc - the class that handles CAHV model cameras}
+	\item{CAHV.h - the header file that defines the CAHV class}
+	\item{isisInterfaceATK.cc - interface for ISIS camera models}
+	\item{isisInterfaceATK.h - header file for ISIS camera models}
+	\item{tests/make\_camera.cc - a basic tester that will create camera models}
+	\item{tests/isistool.cc - }
+
+\end{itemize}
+
+\section{How to install:}
+{\bf Pinhole and CAHV models}
+\begin{enumerate}
+	\item{Install Prerequisites - Install Eigen 3.0, cmake}
+	\item{Install camera\_models - inside camera\_models/tests directory type: "cmake ." }
+	\item{Build camera\_models tests - inside camera\_models/tests directory type: "make" }
+	\item{Run Examples}
+\end{enumerate}
+
+{\bf ISIS camera models}
+\begin{enumerate}
+
+\item Get ISIS for your platform from \\
+
+   \url {http://isis.astrogeology.usgs.gov/documents/InstallGuide/}\\
+ 
+   You may pass to rsync the following options to decrease the download time:
+   --exclude '*/*doc*' --exclude '*/*.png' --exclude '*/*.jpg' --exclude '*/*.html'
+
+\item For Linux only:
+\begin{itemize} 
+ \item Compile and install patchelf 
+   \url{http://releases.nixos.org/patchelf/patchelf-0.8/patchelf-0.8.tar.bz2}
+ \item Get Qt 4.8:\\
+   \url{http://download.qt-project.org/official_releases/qt/4.8/4.8.6/qt-everywhere-opensource-src-4.8.6.tar.gz}\\
+   Unpack and configure Qt. There is no need to compile it as we need
+   only the headers (ISIS includes the libraries proper).
+\end{itemize}
+\item Install CSPICE:
+   \url{wget ftp://naif.jpl.nasa.gov/pub/naif/toolkit//C/MacIntel_OSX_AppleC_64bit/packages/cspice.tar.Z}
+   Unpack it. There is no need to compile it (as we need just the
+   headers). \\
+   To please ISIS, do\\   
+   cd cspice \\
+   ln -s include naif
+
+\item Build using cmake:
+
+   cd lima/isis\\
+   mkdir build\\
+   cd build\\
+   cmake ..\\
+
+If cmake fails to find the dependencies automatically, 
+and the dependencies are installed in a certain directory
+(with standard include, lib, and bin subdirectories),
+you can pass that directory to cmake as 
+
+-DISIS\_ROOT:PATH=<your isis install dir> 
+
+If this still fails, you can set the paths to all dependenices
+individually, as follows.
+
+On MacOSX:
+
+cmake .. -DISIS\_ROOT:PATH=<your isis install dir>      \\
+         -DCSPICE\_ROOT:PATH=<your cspice dir>
+
+On Linux:
+
+cmake .. -DISIS\_ROOT:PATH=<your isis install dir>      \\
+         -DCSPICE\_ROOT:PATH=<your cspice dir>          \\
+         -DPATCHELF:PATH=<path to your patchelf tool>    \\
+         -DQT\_ROOT:PATH=<path to your Qt installation>
+
+Then type 'make'.
+
+\end{enumerate}
+
+\section{How to run:}
+\begin{enumerate}
+   \item./make\_camera imageFilename configFilename resultsDirname
+   \item export ISISROOT=<your ISIS install dir>\\
+export ISIS3DATA=<your ISIS data dir>\\
+./isistool <your .cub file>
+\end{enumerate}
+
+\section{Camera configuration files:}
+\subsection{Pinhole}
+\begin{itemize}
+    \item {[Required] CAMERA\_MATRIX} f\_x 0 c\_x 0 f\_y c\_y 0 0 1 \\
+    \item {[Required] WIDTH\_HEIGHT} width height \\
+    \item {[Required] TRANSLATION} t\_x t\_y t\_z \\
+    \item {[Required] ROTATION} (0,0) (0,1) (0,2) (1,0) (1,1) (1,2) (2,0) (2,1) (2,2) \\
+    \item {[Optional] DISTORTION\_COEFFICIENTS}
+\end{itemize}
+\subsection{CAHV}
+\begin{itemize}
+	\item {[Required] C} c\_0 c\_1 c\_2\\
+	\item {[Required] A} a\_0 a\_1 a\_2\\
+	\item {[Required] H} h\_0 h\_1 h\_2\\
+	\item {[Required] V} v\_0 v\_1 v\_2\\
+	\item {[Required] WIDTH\_HEIGHT} width height\\
+	\item {[Optional] QUATERNION} q\_0 q\_1 q\_2 q\_3
+\end{itemize}
+
+\section{Notes on Pinhole}
+Currently, the conversion from CAHV deviates from the paper in two places.\\ First in the equation for computing the principle point, equation 16 in the paper, the point is not being offset by image\_width/2 or image\_height/2. Hc and Vc are being used directly. This is due to equation 16 producing incorrect results when using the offset. The offset may only be needed when converting to meters.\\
+Second in the equation for extracting the rotation matrix from CAHV, equation 12 in~\cite{Di-Li-2003-cahvor}, the paper calls for -V' and -A. Right now, V' and A are not being inverted. This is due to the conversion producing obviously wrong rotations when V' and A are inverted, but correct ones when they are not inverted.\\
+These choices were made based on behavior when converting this image:\\ image2surface\_processing/tests/data/MLF\_439225344RADLS0240000MCAM01870M1.IMG\\
+The paper includes a numeric example that can be used to verify conversions.
+
+%\subsection{Configuration Parameters}
+%\section{Algorithms}
+\end{document}
+
+
+
+
+
+
+
+
+

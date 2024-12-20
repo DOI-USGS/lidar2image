@@ -1,11 +1,13 @@
 #ifndef PC_H_
 #define PC_H_
 
-// __BEGIN_LICENSE__
-// Copyright (C) 2006, 2007 United States Government as represented by
-// the Administrator of the National Aeronautics and Space Administration.
-// All Rights Reserved.
-// __END_LICENSE__
+/******************************************************************************
+ * NOTE: Original code authored by Ara Nefien in 2006-2007 and placed in the 
+ * public domain per U.S. government policy and personal communication.  
+ ******************************************************************************
+ * 
+ * SPDX-License-Identifier: CC0-1.0
+ ****************************************************************************/
 
 #include <iostream>
 #include <fstream>

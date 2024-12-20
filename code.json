@@ -1,0 +1,49 @@
+[
+    {
+      "name": "lidar2image",
+      "organization": "U.S. Geological Survey",
+      "description": "A tool to align LIDAR data with image data",
+      "version": "1.0.0",
+      "status": "Development",
+
+      "permissions": {
+        "usageType": "openSource",
+        "licenses": [
+          {
+            "name": "Public Domain, CC0-1.0",
+            "URL": "https://code.usgs.gov/astrogeology/lidar2image/-/raw/main/LICENSE.md"
+          }
+        ]
+      },
+      "homepageURL": "https://code.usgs.gov/astrogeology/lidar2image",
+      "downloadURL": "https://code.usgs.gov/astrogeology/lidar2image/-/archive/main/lidar2image-main.zip",
+      "disclaimerURL": "https://code.usgs.gov/astrogeology/lidar2image/-/raw/main/DISCLAIMER.md",
+      "repositoryURL": "https://code.usgs.gov/astrogeology/lidar2image.git",
+      "vcs": "git",
+  
+      "laborHours": 1000,
+  
+      "tags": [
+        "Planetary",
+        "Remote Sensing",
+        "Photogrammetry",
+        "Data Processing",
+        "LIDAR",
+        "Control Networks"
+      ],
+  
+      "languages": [
+        "cpp",
+        "python"
+      ],
+  
+      "contact": {
+        "name": "Austin Sanders",
+        "email": "arsanders@usgs.gov"
+      },
+  
+      "date": {
+        "metadataLastUpdated": "2024-12-20"
+      }
+    }
+  ]

@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 set( CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/../cmake/Modules/ ${CMAKE_MODULE_PATH} )
-set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/tests )
+set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/)
 
 if( CMAKE_COMPILER_IS_GNUCXX )
 	set( WARN_FLAG_ADDITIONS "-fno-strict-aliasing" )
@@ -165,18 +165,6 @@ target_link_libraries(lidar_image_align
                        Qt5::OpenGL
                        ${QWT_LIBRARY}
                        )
-
-# Here we use ISIS's own tool to fix the paths to dynamic libraries
-if(NOT APPLE)
-    MESSAGE("NOT APPLE")
-    add_custom_command(
-        TARGET lidar_image_align 
-        POST_BUILD
-        COMMAND ${PATCHELF} --set-rpath $ENV{ISISROOT}/lib lidar_image_align
-        COMMENT "Editing the run-time paths"
-        VERBATIM
-    )
-endif()
 
 install_targets(/bin lidar_image_align)
 

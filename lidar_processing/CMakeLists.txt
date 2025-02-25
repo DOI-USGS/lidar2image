@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
 set( CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/../cmake/Modules/ ${CMAKE_MODULE_PATH} )
-set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/tests )
+set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/)
 
 include(SetupInstall)
 include(SetupCTest)
@@ -41,6 +41,8 @@ add_executable(track_splitter track_splitter.cpp
                ../geotif_processing/CoordTransform.cpp)
 #target_link_libraries(track_splitter ${OpenCV_LIBS} ${GDAL_LIBRARY})
 target_link_libraries(track_splitter ${GDAL_LIBRARY})
+
+install_targets(/bin track_splitter)
 
 if (CTEST_ENABLED)
   add_test(track_splitter_test bash ./track_splitter_test.sh)

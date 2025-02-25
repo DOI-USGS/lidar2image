@@ -89,7 +89,10 @@ def compute_covariance(lat, lon, rad, latsigma=10., lonsigma=10., radsigma=15., 
 def convert_gcs_to_body_fixed(lat, lon, rad):
     return spiceypy.latrec(rad,lon,lat)
 
-def main(args):
+def main(args=None):
+    if args is None:
+        args = parse_args()
+
     np.set_printoptions(precision=15)
     # Read the GCP file into a data frame
     gcp = pd.read_csv(args.gcp_file, names=['UTC Time', 'Apriori Longitude', 'Apriori Latitude',

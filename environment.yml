@@ -1,7 +1,6 @@
 channels:
   - usgs-astrogeology
   - conda-forge
-  - defaults
 
 dependencies:
   - boost >=1.78.0,<1.79

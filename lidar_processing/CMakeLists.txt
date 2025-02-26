@@ -15,6 +15,7 @@ include(SetupRPATH)
 #find_package( OpenCV REQUIRED )
 find_package( Eigen3 )
 find_package( GDAL )
+find_package( ISIS REQUIRED COMPONENTS isis)
 
 if( CMAKE_COMPILER_IS_GNUCXX )
 	set( WARN_FLAG_ADDITIONS "-fno-strict-aliasing" )
@@ -25,10 +26,11 @@ endif( CMAKE_COMPILER_IS_GNUCXX )
 ## include paths 
 ##--------------------------------------------
 include_directories(
+  $ENV{ISISROOT}/include/
+  $ENV{ISISROOT}/include/eigen3/
   ${PROJECT_SOURCE_DIR}/..
-  ${EIGEN3_INCLUDE_DIR}
- #${OpenCV_INCLUDE_DIR}
-  ${GDAL_INCLUDE_DIR}
+  ${CSPICE_ROOT}/gdal
+  #${EIGEN3_INCLUDE_DIR}
 )
 
 setup_rpath()

@@ -9,11 +9,13 @@ dependencies:
   - cspice =67
   - eigen >=3, <4
   - isis
+  - kalasiris
   - libgdal >=3.7,<3.8
   - libopencv >=4.7,<4.8
   - make
   - ninja >=1.7.2,<1.8
   - opencv >=4.7,<4.8
+  - plio >=1.6.2,<2
   - python >=3.10
   - python_abi >=3.10
   - pytest

@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
         name="lidar2image",
-        version='1.0.0',
+        version='1.0.1',
         packages=find_packages(),
         author = "USGS Astrogeology",
         description = "Utilities for creating ground control networks from LIDAR data",

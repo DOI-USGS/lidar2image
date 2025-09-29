@@ -35,5 +35,7 @@ release.
 
 ## [Unreleased]
 
+## [1.0.1]
+
 ### Changed
 - Changed serial number computation from plio `generate_serial_number` to kalasiris `getsn` [#2](https://github.com/DOI-USGS/lidar2image/pull/2)

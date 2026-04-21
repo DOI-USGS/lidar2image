@@ -3,21 +3,21 @@ channels:
   - conda-forge
 
 dependencies:
-  - boost >=1.78.0,<1.79
-  - boost-cpp >=1.78.0,<1.79
+  - boost >=1.76.0,<1.82
+  - boost-cpp >=1.76.0,<1.82
   - cmake >=3.27,<3.28
   - cspice =67
   - eigen >=3, <4
-  - isis
+  - isis >=9.0.0, <10
   - kalasiris
-  - libgdal >=3.7,<3.8
-  - libopencv >=4.7,<4.8
+  - libgdal >=3.7,<3.9
+  - libopencv >=4.5,<4.10
   - make
-  - ninja >=1.7.2,<1.8
-  - opencv >=4.7,<4.8
-  - plio >=1.6.2,<2
-  - python >=3.10
-  - python_abi >=3.10
+  - ninja >=1.10,<1.11
+  - opencv >=4.5,<4.10
+  - plio =1.6.2
+  - python >=3.9
+  - python_abi >=3.9
   - pytest
-  - qt-main>=5.15.8, <5.16
+  - qt-main >=5.15,<5.16
   - qwt <6.3.0

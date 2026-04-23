@@ -1,0 +1,61 @@
+{% set name = "lidar2image" %}
+{% set version = "1.0.2" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/DOI-USGS/lidar2image/archive/refs/tags/{{ version }}.tar.gz
+  sha256: 51d8491fc26f0fe762acc55989c0854b0d3cb6ee0319acd804e354c35262f03f
+  patches:
+    - patches/0001-Fix-serial-call-to-use-kalasiris-instead-of-pysis.patch
+
+build:
+  skip: true  # [win]
+  number: 0
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+    - boost >=1.78.0,<1.79
+    - boost-cpp >=1.78.0,<1.79
+    - cmake
+    - cspice=67
+    - eigen >=3, <4
+    - usgs-astrogeology::isis =9.0.0
+    - kalasiris
+    - libgdal >=3.7,<3.9
+    - make
+    - mesalib
+    - numpy
+    - ninja
+    - pandas
+    - plio =1.6.2
+    - python >=3.12,<3.13
+    - pytest
+    - qt-main>=5.15.8, <5.16
+    - qwt <6.3.0
+    - spiceypy
+    - suitesparse
+
+  host:
+    - python >=3.12,<3.13
+    - pip
+    - setuptools
+
+  run:
+    - boost >=1.78.0,<1.79
+    - boost-cpp >=1.78.0,<1.79
+    - cspice=67
+    - eigen >=3, <4
+    - usgs-astrogeology::isis =9.0.0
+    - libgdal >=3.7,<3.9
+    - mesalib
+    - plio =1.6.2
+    - pytest
+    - python >=3.12,<3.13
+    - qt-main>=5.15.8, <5.16
+    - qwt <6.3.0
+    - suitesparse
+    - spiceypy

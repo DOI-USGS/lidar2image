@@ -1,0 +1,80 @@
+{% set name = "lidar2image" %}
+{% set version = "1.0.2" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/DOI-USGS/lidar2image/archive/refs/tags/{{ version }}.tar.gz
+  sha256: 51d8491fc26f0fe762acc55989c0854b0d3cb6ee0319acd804e354c35262f03f
+
+build:
+  skip: true  # [win]
+  number: 1
+  run_exports:
+    - {{ pin_subpackage(name|lower, max_pin="x.x") }}
+
+requirements:
+  build:
+    - {{ compiler('cxx') }}
+    - cmake
+    - ninja
+    - patchelf
+
+  host:
+    - python >=3.12,<3.13
+    - pip
+    - setuptools
+    - usgs-astrogeology::isis =9.0.0
+    - boost-cpp >=1.78.0,<1.79
+    - boost >=1.78.0,<1.79
+    - cspice =67
+    - eigen >=3,<4
+    - libtiff >=4.5,<4.8
+    - libgdal >=3.7,<3.9
+    - mesalib
+    - plio =1.6.2
+    - qt-main >=5.15.8,<5.16
+    - qwt <6.3.0
+    - suitesparse
+    - numpy
+
+  run:
+    - python >=3.12,<3.13
+    - usgs-astrogeology::isis =9.0.0
+    - boost-cpp >=1.78.0,<1.79
+    - cspice =67
+    - libtiff >=4.5,<4.8
+    - libgdal >=3.7,<3.9
+    - kalasiris
+    - spiceypy
+    - pandas
+    - plio =1.6.2
+    - qt-main >=5.15.8,<5.16
+    - qwt <6.3.0
+    - suitesparse
+
+test:
+  imports:
+    - polarmosaics
+  requires:
+    - pip
+  commands:
+    - pip check
+
+about:
+  home: https://github.com/DOI-USGS/lidar2image/
+  summary: 'Tools for the creation of ground control networks using LIDAR data'
+  description: |
+    Lidar2image provides C++ and Python utilities to support the creation of a
+    ground control network using an LROC NAC image and coincident LOLA lidar shot data.
+  license: "CC0-1.0"
+  license_family: CC
+  license_file: LICENSE.md
+  dev_url: https://github.com/DOI-USGS/lidar2image/
+
+extra:
+  recipe-maintainers:
+    - Kelvinrr
+    - acpaquette

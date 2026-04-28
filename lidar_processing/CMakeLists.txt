@@ -1,9 +1,13 @@
-project(lidar_tracks)
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 3.10)
+project(lidar_tracks LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
+
+if(NOT APPLE)
+    add_definitions(-D_GLIBCXX_USE_CXX11_ABI=0)
+endif()
 
 set( CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/../cmake/Modules/ ${CMAKE_MODULE_PATH} )
 set( CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/)
@@ -12,10 +16,9 @@ include(SetupInstall)
 include(SetupCTest)
 include(SetupRPATH)
 
-#find_package( OpenCV REQUIRED )
-find_package( Eigen3 )
-find_package( GDAL )
-find_package( ISIS REQUIRED COMPONENTS isis)
+find_package(Eigen3 REQUIRED)
+find_package(GDAL REQUIRED)
+find_package(ISIS REQUIRED COMPONENTS isis)
 
 if( CMAKE_COMPILER_IS_GNUCXX )
 	set( WARN_FLAG_ADDITIONS "-fno-strict-aliasing" )
@@ -26,11 +29,10 @@ endif( CMAKE_COMPILER_IS_GNUCXX )
 ## include paths 
 ##--------------------------------------------
 include_directories(
-  $ENV{ISISROOT}/include/
-  $ENV{ISISROOT}/include/eigen3/
+  ${ISIS_INCLUDE_DIRS}
+  ${EIGEN3_INCLUDE_DIR}
+  ${GDAL_INCLUDE_DIRS}
   ${PROJECT_SOURCE_DIR}/..
-  ${CSPICE_ROOT}/gdal
-  #${EIGEN3_INCLUDE_DIR}
 )
 
 setup_rpath()
@@ -39,13 +41,15 @@ setup_ctest()
 add_executable(track_splitter track_splitter.cpp
                TracksLOLA.cpp
                ../common/ReflectanceModels.cpp
-               ../common/FileListUtils.cpp ../common/StringUtils.cpp
-               ../geotif_processing/CoordTransform.cpp)
-#target_link_libraries(track_splitter ${OpenCV_LIBS} ${GDAL_LIBRARY})
-target_link_libraries(track_splitter ${GDAL_LIBRARY})
+    ../common/FileListUtils.cpp ../common/StringUtils.cpp
+    ../geotif_processing/CoordTransform.cpp)
+target_link_libraries(track_splitter 
+    ${GDAL_LIBRARY}
+    ${ISIS_LIBRARIES}
+)
 
-install_targets(/bin track_splitter)
+install(TARGETS track_splitter DESTINATION bin)
 
-if (CTEST_ENABLED)
-  add_test(track_splitter_test bash ./track_splitter_test.sh)
-endif(CTEST_ENABLED)
+if(CTEST_ENABLED)
+    add_test(NAME track_splitter_test COMMAND bash ./track_splitter_test.sh)
+endif()

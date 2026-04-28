@@ -105,7 +105,7 @@ def main(args=None):
     target = plio.utils.utils.find_in_dict(label, 'TargetName')
 
     # Compute the ISIS3 serial number
-    serial = isis.getsn(from_=args.cube).decode("utf-8").strip()
+    serial = isis.getsn(from_=args.cube).stdout.strip()
 
     columns = ['id', 'pointType', 'serialnumber', 'measureType',
                'sample', 'line',

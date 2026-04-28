@@ -1,6 +1,3 @@
-# (Keep your ISISROOT logic at the top...)
-
-# 1. Find ISIS Core
 find_path(ISIS_INCLUDE_DIR
   NAMES    Isis.h
   HINTS    "${ISISROOT}/include/isis" "${ISISROOT}/include"
@@ -13,7 +10,6 @@ find_path(CSPICE_INCLUDE_DIR
 )
 if(ISIS_INCLUDE_DIR AND CSPICE_INCLUDE_DIR)
     set(ISIS_INCLUDE_DIRS ${ISIS_INCLUDE_DIR} ${CSPICE_INCLUDE_DIR})
-    # Export to parent scope
     set(ISIS_INCLUDE_DIRS ${ISIS_INCLUDE_DIRS} PARENT_SCOPE)
 endif()
 

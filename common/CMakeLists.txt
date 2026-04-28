@@ -5,7 +5,6 @@ project(COMMON_MODULE LANGUAGES CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Handle older ISIS/System ABI compatibility
 if(NOT APPLE)
     add_definitions(-D_GLIBCXX_USE_CXX11_ABI=0)
 endif()
